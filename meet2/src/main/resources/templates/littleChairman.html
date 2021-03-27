@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>论坛信息</title>
+    <title>论坛主席界面</title>
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="../static/css/forumChair.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -14,16 +14,12 @@
 </head>
 <body>
 <header>
-    <span style="color:black">论坛信息</span>
+    <h1>论坛信息</h1>
 </header>
-<div id="num_of_meetings">
-    <p>会议总人数：<span style="color:rebeccapurple">10000</span></p>
-</div>
 <div id="app">
     <template>
         <el-table
                 :data="tableData"
-                stripe="true"
                 style="width:100%">
             <el-table-column
                     prop="topics"
@@ -51,9 +47,9 @@
                     width="120">
                 <template slot-scope="scope">
                     <el-button
-                            type="text"
+                            type = "text"
                             @click = "handleClick(scope.row)"
-                            size="small">
+                            size = "small">
                         发送通知
                     </el-button>
                 </template>
@@ -66,15 +62,10 @@
 
 <script>
  var tableData= [{
-                topics: '今天吃什么',
+                topics: '术语社会科学（SS）',
                 date: '2020-08-09',
                 num_post: '10',
-                num_user: '900'
-            }, {
-                topics: '明天吃什么',
-                date: '2020-08-09',
-                num_post: '10',
-                num_user: '900'
+                num_user: ''
             }]
 
     window.onload = function(){
@@ -84,14 +75,13 @@
     {
         $.ajax(
         {
-            url: 'http://localhost/PairProject/228101410&041801406/backend/public/index.php/index/Serchfunction/serchdata?words='+word,
+            url: 'http://localhost:8080/getpeople',
             type: 'get',
             data: {},
             dataType: 'json'
             }).then(function (res) 
             {
-                tableData[0][3] = res[0]
-                tableData[1][3] = res[1]
+                tableData[0]["num_user"] = res[0]
             }).fail(function () 
             {
                 console.log('失败');
@@ -102,7 +92,12 @@
 var Main = {
     methods: {
         handleClick(row) {
-            window.location.href="addmsg.html?data=1";
+            if(row.topics == '术语社会科学（SS）' ){
+                window.location.href="addmsg.html?data=1";
+            }
+            else{
+                window.location.href="addmsg.html?data=2";
+            }
         }
     },
     data() {
