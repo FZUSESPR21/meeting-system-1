@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,9 +29,9 @@ public class TestController {
     @CrossOrigin(origins = "*", maxAge = 3600)
     public List<UserShow> getUser(){
         List<User> list = userServiceImp.getAllUser();
-        List<UserShow> listshow = null;
+        List<UserShow> listshow = new ArrayList<>();
         for (int i=0;i<list.size();i++){
-            UserShow userShow = null;
+            UserShow userShow = new UserShow();
             userShow.setName(list.get(i).getName());
             userShow.setUserid(list.get(i).getUserid());
             if (list.get(i).getMeetingid()==0){

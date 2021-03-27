@@ -15,7 +15,9 @@ public class UserShow {
         this.name = name;
         this.meetingid = meetingid;
     }
+    public UserShow(){
 
+    }
     public void setMeetingid(String meetingid) {
         this.meetingid = meetingid;
     }
