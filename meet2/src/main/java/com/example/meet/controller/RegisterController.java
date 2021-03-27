@@ -22,16 +22,16 @@ public class RegisterController {
     @RequestMapping("/register")
     public int register(@RequestBody String k){
         String[] profile = k.split("\\+");
-        if (userServiceImp.searchUser(profile[0])==1){
-            return 0;
-        }
-        else {
+        if (userServiceImp.searchUser(profile[0])==0){
             if (userServiceImp.registerUser(profile[0],profile[1],profile[2])==1){
                 return 1;
             }
             else {
                 return 2;
             }
+        }
+        else {
+            return 0;
         }
     }
 }

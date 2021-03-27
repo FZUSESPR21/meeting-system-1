@@ -1,5 +1,6 @@
 package com.example.meet.controller;
 
+import com.example.meet.bean.MegShow;
 import com.example.meet.bean.Msg;
 import com.example.meet.mapper.MsgMapper;
 import com.example.meet.service.serviceImp.MsgServiceImpl;
@@ -10,7 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,5 +38,19 @@ public class MsgController {
         Date date = new Date(System.currentTimeMillis());
 
         Integer msg = msgService.addMsg(profile[2],profile[0],Integer.parseInt(profile[1]),formatter.format(date));
+    }
+
+    @ResponseBody
+    @CrossOrigin
+    @RequestMapping("/msgshow")
+    public List<MegShow> msgShow(@RequestBody int k) {
+        List<MegShow> megShowgs = new ArrayList<>();
+
+        if (k != 3) {
+            megShowgs = msgService.showMsg(k);
+        } else {
+            megShowgs = msgService.showMsgAll();
+        }
+        return megShowgs;
     }
 }
