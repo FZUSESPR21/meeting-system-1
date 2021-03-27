@@ -27,4 +27,8 @@ public class UserServiceImp implements UserService {
     public Integer registerUser(String userid,String name,String password,Integer meetingid) {
         return userMapper.registerUser(userid,name,password,meetingid);
     }
+
+    public User accessLogin(String userid,String password) {
+        return userMapper.accessLogin(userid,password);
+    }
 }

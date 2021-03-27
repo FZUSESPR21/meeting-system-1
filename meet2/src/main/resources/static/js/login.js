@@ -47,12 +47,12 @@ var Main = {
         var k=name+"+"+password;
         $.ajax(
           {
-              url: '/accessLogin',
-              type: 'get',
+              url: 'accessLoginN',
+              type: 'post',
               data: k,
               }).then(function (res) 
               {
-                alert(1);　　　　
+                  console.log(res);　
               }).fail(function () 
               {
                   console.log('失败');
@@ -65,12 +65,12 @@ var Main = {
         var k=name+"+"+password;
         $.ajax(
           {
-              url: '',
-              type: 'get',
+              url: 'accessLoginP',
+              type: 'post',
               data: k,
               }).then(function (res) 
               {
-                alert(1);　　　　
+                console.log(res)　　　
               }).fail(function () 
               {
                   console.log('失败');

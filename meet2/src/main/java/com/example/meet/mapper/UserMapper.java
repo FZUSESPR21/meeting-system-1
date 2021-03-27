@@ -24,5 +24,6 @@ public interface UserMapper {
     public Integer registerUser(@Param("userid") String userid, @Param("name") String name,
                                 @Param("password") String password, @Param("meetingid") Integer meetingid);
 
-
+    @Select("SElECT * FROM user where userid = #{userid} and password = #{password}")
+    public User accessLogin(@Param("userid") String userid,@Param("password") String password);
 }
