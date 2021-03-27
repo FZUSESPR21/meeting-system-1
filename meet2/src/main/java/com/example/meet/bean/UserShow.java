@@ -8,15 +8,15 @@ package com.example.meet.bean;
 public class UserShow {
     private String userid;
     private String name;
-    private Integer meetingid;
+    private String meetingid;
 
-    public UserShow(String userid, String name,Integer meetingid) {
+    public UserShow(String userid, String name,String meetingid) {
         this.userid = userid;
         this.name = name;
         this.meetingid = meetingid;
     }
 
-    public void setMeetingid(Integer meetingid) {
+    public void setMeetingid(String meetingid) {
         this.meetingid = meetingid;
     }
 
@@ -28,7 +28,7 @@ public class UserShow {
         this.userid = userid;
     }
 
-    public Integer getMeetingid() {
+    public String getMeetingid() {
         return meetingid;
     }
 

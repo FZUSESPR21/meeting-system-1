@@ -20,7 +20,7 @@ public class UserServiceImp implements UserService {
     @Autowired
     UserMapper userMapper;
 
-    public List<UserShow> getAllUser() {
+    public List<User> getAllUser() {
         return userMapper.getAllUser();
     }
 

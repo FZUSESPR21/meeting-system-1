@@ -27,8 +27,27 @@ public class TestController {
     @GetMapping("/get")
     @CrossOrigin(origins = "*", maxAge = 3600)
     public List<UserShow> getUser(){
-        List<UserShow> list = userServiceImp.getAllUser();
-        return list;
+        List<User> list = userServiceImp.getAllUser();
+        List<UserShow> listshow = null;
+        for (int i=0;i<list.size();i++){
+            UserShow userShow = null;
+            userShow.setName(list.get(i).getName());
+            userShow.setUserid(list.get(i).getUserid());
+            if (list.get(i).getMeetingid()==0){
+                userShow.setMeetingid("非会员");
+            }
+            else if(list.get(i).getMeetingid()==1){
+                userShow.setMeetingid("分论坛一会员");
+            }
+            else if(list.get(i).getMeetingid()==2){
+                userShow.setMeetingid("分论坛二会员");
+            }
+            else {
+                userShow.setMeetingid("分论坛一、二的会员\n");
+            }
+            listshow.add(userShow);
+        }
+        return listshow;
     }
 
     @GetMapping("/login")

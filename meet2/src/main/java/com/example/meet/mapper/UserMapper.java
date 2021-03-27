@@ -17,8 +17,8 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    @Select("SELECT userid,name,meetingid FROM user")
-    public List<UserShow> getAllUser();
+    @Select("SELECT * FROM user")
+    public List<User> getAllUser();
 
     @Insert("INSERT INTO user VALUES(#{userid},#{name},#{password},#{meetingid})")
     public Integer registerUser(@Param("userid") String userid, @Param("name") String name,
