@@ -9,7 +9,17 @@ import org.springframework.stereotype.Service;
  *
  * @author Chen Yao
  */
+
 @Service
 public class AdminServiceImp {
+@Service
+public class AdminServiceImp {
+    @Autowired
+    AdminMapper adminMapper;
+    public Integer insAdmin(String adminid, String password, Integer meetingid, Integer identity){
+        return adminMapper.insAdmin(adminid, password, meetingid, identity);
+    }
+}
 
 }
+

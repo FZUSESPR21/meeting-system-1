@@ -55,4 +55,25 @@ public class TestController {
     public String getLogin() {
         return "login";
     }
+
+    @ResponseBody
+    @GetMapping("/getpeople")
+    @CrossOrigin(origins = "*", maxAge = 3600)
+    public int[] ShowPeopleBranch(){
+        List<User> list = userServiceImp.getAllUser();
+        int[] peopleNum = new int[2];
+        for (int i=0;i<list.size();i++){
+            if (list.get(i).getMeetingid()==1){
+                peopleNum[0]++;
+            }
+            else if (list.get(i).getMeetingid()==2){
+                peopleNum[1]++;
+            }
+            else {
+                peopleNum[0]++;
+                peopleNum[1]++;
+            }
+        }
+        return peopleNum;
+    }
 }
