@@ -12,6 +12,6 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface MsgMapper {
 
-    @Insert("INSERT INTO message name('msgdata','adminname','meetingid','time') values(#{msgdata},#{adminname},#{meetingid},#{time})")
-    public Integer addMSg(@Param("msgdata") String msgdata,@Param("adminname") String adminname,@Param("meetingid") String meetingid,@Param("time") String time);
+    @Insert("INSERT INTO message (msgdata,adminname,meetingid,time) values(#{msgdata},#{adminname},#{meetingid},#{time})")
+    public Integer addMSg(@Param("msgdata") String msgdata,@Param("adminname") String adminname,@Param("meetingid") Integer meetingid,@Param("time") String time);
 }
