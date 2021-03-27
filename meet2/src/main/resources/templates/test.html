@@ -268,10 +268,9 @@
         }
         var Ctor = Vue.extend(Main)
         new Ctor().$mount('#app')
-
         //获取关注人数
-        var follow1;
-        var follow2;
+        var follow1=0;
+        var follow2=0;
 
         $.ajax({
             url: 'http://localhost:8080/getpeople',
@@ -281,15 +280,14 @@
         }).then(function (res) {
                 follow1=res[0];
                 follow2=res[1];
+            var f1 = document.getElementById("follows1");
+            f1.innerText = follow1;
+            var f1 = document.getElementById("follows2");
+            f1.innerText = follow2;
         }).fail(function () {
             console.log('失败');
         })
 
-        var f1 = document.getElementById("follows1");
-        f1.innerText = follow1;
-
-        var f1 = document.getElementById("follows2");
-        f1.innerText = follow2;
     </script>
 
 </body>
