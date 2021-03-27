@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.1/lib/theme-chalk/index.css">
   <link rel="stylesheet" href="css/login.css">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/element-ui@2.15.1/lib/index.js"></script>
@@ -13,8 +13,9 @@
 
 <body>
   <div id="login">
-    <el-tabs v-model="activeName" @tab-click="handleClick">
-      <el-tab-pane label="我是普通用户" name="first">
+    <div id="mylogin">
+    <el-tabs v-model="activeName" @tab-click="handleClick" id="onlogin">
+      <el-tab-pane label="我是普通用户" name="first" v-model="first" id="firsttab">
         <div id="userLogin">
           <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px"
             class="demo-ruleForm">
@@ -29,11 +30,11 @@
               <el-button @click="resetForm('ruleForm')">重置</el-button>
             </el-form-item>
           </el-form>
-          <el-link type="info" href="/" id="register">立即注册</el-link>
+          <el-link type="info" onclick="register()" id="register1">立即注册</el-link>
           <el-link type="info" href="/" id="resetpass">忘记密码?</el-link>
         </div>
       </el-tab-pane>
-      <el-tab-pane label="我是主席" name="second">
+      <el-tab-pane label="我是主席" name="second" v-model="second" id="secondtab">
         <div id="presidentLogin">
           <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px"
             class="demo-ruleForm">
@@ -50,7 +51,7 @@
           </el-form>
         </div>
       </el-tab-pane>
-      <el-tab-pane label="我是分论坛主席" name="third">
+      <el-tab-pane label="我是分论坛主席" name="third" v-model="third" id="thirdtab">
         <div id="secondPresidentLogin">
           <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px"
             class="demo-ruleForm">
@@ -67,7 +68,7 @@
           </el-form>
         </div>
       </el-tab-pane>
-      <el-tab-pane label="我是秘书" name="fourth">
+      <el-tab-pane label="我是秘书" name="fourth" v-model="fourth" id="fourthtab">
         <div id="secretoryLogin">
           <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px"
             class="demo-ruleForm">
@@ -84,8 +85,24 @@
           </el-form>
         </div>
       </el-tab-pane>
-    </el-tabs>
-    <el-button icon="el-icon-arrow-right" circle id="back"></el-button>
+    </el-tabs></div>
+    <div id="register">
+      <el-form :model="registerForm" status-icon :rules="rules" ref="registerForm" label-width="100px" class="demo-registerForm">
+        <el-form-item label="账号" prop="age">
+          <el-input v-model.number="registerForm.age"></el-input>
+        </el-form-item><el-form-item label="密码" prop="pass1">
+          <el-input type="password" v-model="registerForm.pass1" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="确认密码" prop="checkPass1">
+          <el-input type="password" v-model="registerForm.checkPass1" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="submitForm2('registerForm')">提交</el-button>
+          <el-button @click="resetForm('registerForm')">重置</el-button>
+        </el-form-item>
+      </el-form>
+    </div>
+    <el-button icon="el-icon-arrow-right" circle id="back" onclick="goback()"></el-button>
   </div>
 </body>
 <script src="js/login.js"></script>
