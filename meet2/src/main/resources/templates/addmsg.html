@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布通知消息</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui@2.15.1/lib/index.js"></script>
+    <script src="//unpkg.com/vue/dist/vue.js"></script>
+    <script src="//unpkg.com/element-ui@2.15.1/lib/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../static/css/addmsg.css">
+</head>
+<body>
+<header>
+    <h1>发送通知消息</h1>
+</header>
+<div id="addmsg">
+    <el-form ref="form" :model="form" label-width="80px">
+      <el-form-item label="身份">
+        <el-select v-model="form.region" placeholder="请选择您的身份">
+          <el-option label="分论坛主席" value=1></el-option>
+          <el-option label="秘书" value=2></el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item label="通知内容">
+        <el-input type="textarea" v-model="form.desc"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="onSubmit">立即发布</el-button>
+        <el-button>取消</el-button>
+      </el-form-item>
+    </el-form>
+    </div>
+<script src="../static/js/addmsg.js"></script>
+
+</body>
+</html>

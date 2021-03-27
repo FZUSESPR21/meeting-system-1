@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>论坛信息</title>
+    <style>
+
+        body,html{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin-top: 0px;
+            padding-top: 0px;
+            overflow: hidden;
+            background-image: url("bg.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+
+        .header{
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            left: 0px;
+            top: 0px;
+            line-height: 20px;
+            background-color: rgba(255,255,255,0.5);
+            opacity: 0.22;
+            text-align: center;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 100);
+            padding: 0px;
+            margin: 0px;
+        }
+
+        button{
+            position: absolute;
+            background-color: #ffffff;
+            left: 90%;
+            top:2%;
+            width: 60px;
+            height: 32px;
+            line-height: 6px;
+            border-radius: 10px;
+            color: #c12e2e;
+            font-size: 14px;
+            text-align: center;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+            border: none;
+            font-weight: bold;
+        }
+
+        #title{
+            position: fixed;
+            width: 100%;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            top: 10%;
+        }
+
+        #underline{
+            position: fixed;
+            width: 130px;
+            height: 9px;
+            background-color: #685BCC;
+            left: 46%;
+            border-radius: 5px;
+            top: 22%;
+        }
+
+        .inform{
+            position: fixed;
+            width: 100%;
+        }
+        .inform img{
+            position: fixed;
+            display: inline;
+            top: 26%;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .inform p{
+            position: fixed;
+            display: inline;
+            top: 23%;
+            text-align: center;
+            vertical-align: middle;
+            color: #707070;
+        }
+
+        #icon1{
+            position: fixed;
+            left: 40%;
+        }
+
+        #icon2{
+            position: fixed;
+            left: 50%;
+        }
+
+        #text1{
+            position: fixed;
+            left: 42%;
+        }
+        #text2{
+            position: fixed;
+            left: 52%;
+        }
+
+        .content{
+            position: relative;
+            width: 80%;
+            height: 20%;
+            top: 33%;
+            left: 10%;
+            padding: 0px 10px;
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+        }
+        #title-content{
+            position: absolute;
+            font-weight: bold;
+        }
+        .inform2{
+            position: absolute;
+            display: inline;
+        }
+        #icon-numbers,#icon-views{
+            position: absolute;
+        }
+        #title-content{
+            position: absolute;
+            top: 0px;
+            padding-top: 0px;
+        }
+        #icon3,#icon4{
+            position: absolute;
+            top: 38px;
+            padding-top: 0px;
+            display: inline;
+        }
+        #icon4{
+            position: absolute;
+            margin-left: 200px;
+        }
+        #text3 {
+            position: absolute;
+            display: inline;
+            left: 25px;
+            width: 90px;
+            top: 26px;
+            font-size: 12px;
+            color: #707070;
+        }
+        #text4{
+            position: absolute;
+            display: inline;
+            left: 215px;
+            width: 1000px;
+            font-size: 12px;
+            color: #707070;
+            top: 26px;
+        }
+
+        #summary{
+            position: absolute;
+            padding: 3px;
+            top: 45px;
+            font-size: 12px;
+        }
+        #icon-views,#icon-numbers,.num{
+            position: absolute;
+            display: inline;
+        }
+        #icon-numbers,#icon-views{
+            width: 15px;
+            top: 85px;
+        }
+        #icon-numbers{
+            left: 195px;
+        }
+        .num{
+            top: 70px;
+        }
+        #views-num{
+            left: 215px;
+        }
+        #numbers-num{
+            left: 30px;
+        }
+
+
+    </style>
+
+</head>
+    <body>
+        <div class="header"></div>
+        <button type="button">注销</button>
+
+        <p id="title">论坛信息</p>
+        <div id="underline"></div>
+
+        <div class="inform">
+            <img src="icon-主席.png" id="icon1"/>
+            <p id="text1">分论坛主席</p>
+            <img src="icon-time.png" id="icon2"/>
+            <p id="text2">2021-03-29 ~ 2021-04-02</p>
+        </div>
+
+        <div class="content">
+            <p id="title-content">术语社会科学</p>
+            <div class="inform2">
+                <img src="icon-主席.png" id="icon3"/>
+                <p id="text3">分论坛主席</p>
+                <img src="icon-time.png" id="icon4"/>
+                <p id="text4">2021-03-29 ~ 2021-04-02</p>
+            </div>
+            <p id="summary">摘要：它包括有关管理，经济学，金融，工商管理，电子商务，管理科学，媒体研究，政治学和心理学的研究。该领域的研究主要基于经济学，管理科学，心理学和社会学的基础学科。</p>
+            <img src="icon-numbers.png" id="icon-numbers"/>
+            <p class="num" id="numbers-num">3546</p>
+            <img src="icon-views.png" id="icon-views"/>
+            <p class="num" id="views-num">7329</p>
+        </div>
+
+    <div>
+        <p style="position:absolute; top: 320px; text-align: center; width: 100%;">论坛通知</p>
+        <div style="position: absolute; top: 330px; background-color: #685BCC";></div>
+    </div>
+
+    </body>
+</html>
