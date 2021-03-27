@@ -102,6 +102,13 @@
         </el-form-item>
       </el-form>
     </div>
+    <div id="selectfourm">
+      <el-checkbox-group v-model="checkboxGroup2" >
+      <el-checkbox label="备选项1" border id="checked1" @click="check1()"></el-checkbox>
+      <el-checkbox label="备选项2" border id="checked2" @click="check2()"></el-checkbox>
+    </el-checkbox-group>
+      <el-button type="info" @click="registersuccess()" id="registersubmit">提交</el-button>
+    </div>
     <el-button icon="el-icon-arrow-right" circle id="back" onclick="goback()"></el-button>
   </div>
 </body>

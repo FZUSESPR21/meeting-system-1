@@ -43,11 +43,13 @@ public class MsgController {
     @ResponseBody
     @CrossOrigin
     @RequestMapping("/msgshow")
-    public List<MegShow> msgShow(@RequestBody int k) {
+    public List<MegShow> msgShow(@RequestBody String k) {
         List<MegShow> megShowgs = new ArrayList<>();
+        k = k.replace("=","");
+        Integer kk = Integer.parseInt(k);
 
-        if (k != 3) {
-            megShowgs = msgService.showMsg(k);
+        if (kk != 3) {
+            megShowgs = msgService.showMsg(kk);
         } else {
             megShowgs = msgService.showMsgAll();
         }
