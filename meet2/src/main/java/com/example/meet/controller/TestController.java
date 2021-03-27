@@ -27,4 +27,9 @@ public class TestController {
         List<UserShow> list = userServiceImp.getAllUser();
         return list;
     }
+
+    @GetMapping("/login")
+    public String getLogin() {
+        return "login";
+    }
 }

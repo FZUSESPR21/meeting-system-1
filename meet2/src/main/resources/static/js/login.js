@@ -47,7 +47,7 @@ var Main = {
         var k=name+"+"+password;
         $.ajax(
           {
-              url: '',
+              url: '/accessLogin',
               type: 'get',
               data: k,
               }).then(function (res) 
