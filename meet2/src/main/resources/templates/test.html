@@ -2,10 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>首页</title>
+    <style>
+        body,html{
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            margin-top: 0px;
+            padding-top: 0px;
+            overflow: hidden;
+            background-image: url("bg.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            height: 78px;
+            float:top;
+            left: 0px;
+            top: 0px;
+            line-height: 20px;
+            background-color: rgba(255,255,255,0.5);
+            opacity: 0.22;
+            text-align: center;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 100);
+        }
+        #login {
+            position: fixed;
+            left: 85%;
+            top:2.5%;
+            width: 80px;
+            height: 42px;
+            line-height: 20px;
+            border-radius: 11px;
+            background-color: rgba(104, 91, 204, 100);
+            color: rgba(255,255,255);
+            font-size: 14px;
+            text-align: center;
+            box-shadow: 0px 2px 6px 0px rgba(104, 91, 204, 100);
+            border: none;
+        }
+        #title {
+            position: fixed;
+            width: 100%;
+            height: 78px;
+            font-size: 28px;
+            text-align: center;
+            top: 13%;
+            vertical-align: middle;
+            color: black;
+        }
+        #line {
+            position: absolute;
+            width: 50%;
+            height: 0.8%;
+            top: 20%;
+            left: 25%;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 12px;
+            background-color: rgba(104, 91, 204, 100);
+            text-align: center;
+        }
+        #boss {
+            
+        }
+    </style>
 </head>
+
 <body>
-    <h1>找到用户</h1>
+    <header></header>
+    <button id="login">登录</button>
+    <p id="title">SSCI 2021：2021年社会科学与计算机信息学国际会议</p>
+    <div id="line"></div>
+    <img id="boss" src="主席图标@1x.png"/>
 
 </body>
 </html>
