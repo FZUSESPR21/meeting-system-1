@@ -62,7 +62,7 @@
 </head>
 <body>
 <header>
-    <h1>论坛信息</h1>
+    <h1>主席界面</h1>
 </header>
 <div id="app">
     <template>
@@ -161,6 +161,10 @@
             {
                 tableData[0]["num_user"] = res[0]
                 tableData[1]["num_user"] = res[1]
+                var f1 = document.getElementById("follows1");
+                f1.innerText = res[0];
+                var f1 = document.getElementById("follows2");
+                f1.innerText = res[1];
             }).fail(function ()
             {
                 console.log('失败');

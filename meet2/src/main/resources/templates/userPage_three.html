@@ -371,6 +371,7 @@
     <div style="position: absolute; background-color: #685BCC"; id="underline2"></div>
 </div>
 
+<<<<<<< HEAD
 <script src="//unpkg.com/vue/dist/vue.js"></script>
 <script src="//unpkg.com/element-ui@2.15.1/lib/index.js"></script>
 <div id="app">
@@ -395,6 +396,13 @@
             </el-table-column>
         </el-table>
     </template>
+=======
+<div style="position:absolute; width: 80%; "id="information_">
+
+    <p id="inform_title">论坛通知标题</p>
+    <p style="position:absolute;" id="inform_time">2020-03-30 15:56</p>
+    <p id="announce">一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息.....</p>
+>>>>>>> a2bf18d794bfe5177865e13f51bc7f1594602889
 </div>
 
 </body>
@@ -448,12 +456,12 @@
     var k = 3;
     $.ajax(
         {
-            url: '',
+            url: 'http://localhost:8080/getpeople/msgshow',
             type: 'get',
             data: k,
         }).then(function (res)
     {
-
+        var title = document
 
     }).fail(function ()
     {

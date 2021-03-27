@@ -33,7 +33,7 @@ body,html{
     background-size: 100% 100%;
 }
 
-.el-table td, .el-table th{
+.has-gutter td,th{
     text-align: center;
 }
 
