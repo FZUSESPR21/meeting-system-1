@@ -162,7 +162,7 @@
 
     <header></header>
 
-    <button id="login">登录</button>
+    <button id="login" onclick="login()">登录</button>
     <p id="title">SSCI 2021：2021年社会科学与计算机信息学国际会议</p>
     <div id="line"></div>
 
@@ -290,6 +290,11 @@
 
         var f1 = document.getElementById("follows2");
         f1.innerText = follow2;
+
+        function login() {
+            window.location="/userPage.html";
+        }
+
     </script>
 
 </body>
