@@ -11,9 +11,5 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AdminServiceImp {
-    @Autowired
-    AdminMapper adminMapper;
-    public Integer insAdmin(String adminid, String password, Integer meetingid, Integer identity){
-        return adminMapper.insAdmin(adminid, password, meetingid, identity);
-    }
+
 }
