@@ -23,8 +23,8 @@ public interface UserMapper {
     @Insert("SELECT * from user where userid = #{userid}")
     public Integer searchUser(@Param("userid") String userid);
 
-    @Select("SElECT * FROM user where userid = #{userid} and password = #{password}")
-    public User accessLogin(@Param("userid") String userid,@Param("password") String password);
+    @Select("SElECT * FROM user where name = #{name} and password = #{password}")
+    public User accessLogin(@Param("name") String userid,@Param("password") String password);
 
     @Insert("INSERT INTO user (name,password,meetingid) values(#{username},#{userpassword},#{usermeetingid})")
     public Integer registerUser(@Param("username") String username,@Param("userpassword") String password,
