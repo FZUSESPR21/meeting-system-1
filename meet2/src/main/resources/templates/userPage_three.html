@@ -194,16 +194,103 @@
         #numbers-num{
             left: 30px;
         }
+
+        .content1{
+            position: relative;
+            width: 80%;
+            height: 17%;
+            top: 33%;
+            left: 10%;
+            padding: 0px 10px;
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+        }
+        #title-content1{
+            position: absolute;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .inform3{
+            position: absolute;
+            display: inline;
+        }
+        #icon-numbers1,#icon-views1{
+            position: absolute;
+        }
+        #title-content1{
+            position: absolute;
+            top: 0px;
+            padding-top: 0px;
+        }
+        #icon5,#icon6{
+            position: absolute;
+            top: 55px;
+            padding-top: 0px;
+            display: inline;
+        }
+        #icon6{
+            position: absolute;
+            margin-left: 200px;
+        }
+        #text5 {
+            position: absolute;
+            display: inline;
+            left: 25px;
+            width: 90px;
+            top: 38px;
+            font-size: 16px;
+            color: #707070;
+        }
+        #text6{
+            position: absolute;
+            display: inline;
+            left: 215px;
+            width: 1000px;
+            font-size: 16px;
+            color: #707070;
+            top: 38px;
+        }
+
+        #summary1{
+            position: absolute;
+            padding: 3px;
+            top: 65px;
+            font-size: 16px;
+        }
+        #icon-views1,#icon-numbers1,.num1{
+            position: absolute;
+            display: inline;
+        }
+        #icon-numbers1,#icon-views1{
+            width: 15px;
+            top: 118px;
+        }
+        #icon-numbers1{
+            left: 195px;
+        }
+        .num1{
+            top: 100px;
+            color: #707070;
+            font-size: 16px;
+        }
+        #views-num1{
+            left: 215px;
+        }
+        #numbers-num1{
+            left: 30px;
+        }
+
         #underline2{
             width: 80px;
             height: 5px;
             left: 48%;
-            top: 55%;
+            top: 75%;
             border-radius: 5px;
         }
 
         #information_{
-            top: 58%;
+            top: 80%;
             box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
             left: 10%;
             padding: 0px 10px;
@@ -229,51 +316,65 @@
             padding: 10px;
         }
 
-
     </style>
 
 </head>
-    <body>
-        <div class="header"></div>
-        <button type="button">注销</button>
+<body>
+<div class="header"></div>
+<button type="button">注销</button>
 
-        <p id="title">论坛信息</p>
-        <div id="underline"></div>
+<p id="title">论坛信息</p>
+<div id="underline"></div>
 
-        <div class="inform">
-            <img src="icon-主席.png" id="icon1"/>
-            <p id="text1">分论坛主席</p>
-            <img src="icon-time.png" id="icon2"/>
-            <p id="text2">2021-03-29 ~ 2021-04-02</p>
-        </div>
+<div class="inform">
+    <img src="icon-主席.png" id="icon1"/>
+    <p id="text1">分论坛主席</p>
+    <img src="icon-time.png" id="icon2"/>
+    <p id="text2">2021-03-29 ~ 2021-04-02</p>
+</div>
 
-        <div class="content">
-            <p id="title-content">术语社会科学(SC)</p>
-            <div class="inform2">
-                <img src="icon-主席.png" id="icon3"/>
-                <p id="text3">分论坛主席</p>
-                <img src="icon-time.png" id="icon4"/>
-                <p id="text4">2021-03-20 ~ 2021-03-30</p>
-            </div>
-            <p id="summary">摘要：它包括有关管理，经济学，金融，工商管理，电子商务，管理科学，媒体研究，政治学和心理学的研究。该领域的研究主要基于经济学，管理科学，心理学和社会学的基础学科。</p>
-            <img src="icon-numbers.png" id="icon-numbers"/>
-            <p class="num" id="numbers-num">3546</p>
-            <img src="icon-views.png" id="icon-views"/>
-            <p class="num" id="views-num">7329</p>
-        </div>
-
-    <div>
-        <p style="position:absolute; top: 50%; text-align: center; width: 100%; font-size: 23px">论坛通知</p>
-        <div style="position: absolute; background-color: #685BCC"; id="underline2"></div>
+<div class="content">
+    <p id="title-content">术语社会科学(SC)</p>
+    <div class="inform2">
+        <img src="icon-主席.png" id="icon3"/>
+        <p id="text3">分论坛主席</p>
+        <img src="icon-time.png" id="icon4"/>
+        <p id="text4">2021-03-20 ~ 2021-03-30</p>
     </div>
+    <p id="summary">摘要：它包括有关管理，经济学，金融，工商管理，电子商务，管理科学，媒体研究，政治学和心理学的研究。该领域的研究主要基于经济学，管理科学，心理学和社会学的基础学科。</p>
+    <img src="icon-numbers.png" id="icon-numbers"/>
+    <p class="num" id="numbers-num">3546</p>
+    <img src="icon-views.png" id="icon-views"/>
+    <p class="num" id="views-num">7329</p>
+</div>
 
-    <div style="position:absolute; width: 80%; "id="information_">
-        <p id="inform_title">论坛通知标题</p>
-        <p style="position:absolute;" id="inform_time">2020-03-30 15:56</p>
-        <p id="announce">一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息.....</p>
+<div class="content1">
+    <p id="title-content1">术语社会科学(SC)</p>
+    <div class="inform3">
+        <img src="icon-主席.png" id="icon5"/>
+        <p id="text5">分论坛主席</p>
+        <img src="icon-time.png" id="icon6"/>
+        <p id="text6">2021-03-20 ~ 2021-03-30</p>
     </div>
+    <p id="summary1">摘要：它包括有关管理，经济学，金融，工商管理，电子商务，管理科学，媒体研究，政治学和心理学的研究。该领域的研究主要基于经济学，管理科学，心理学和社会学的基础学科。</p>
+    <img src="icon-numbers.png" id="icon-numbers1"/>
+    <p class="num1" id="numbers-num1">3546</p>
+    <img src="icon-views.png" id="icon-views1"/>
+    <p class="num1" id="views-num1">77298</p>
+</div>
 
-    </body>
+<div>
+    <p style="position:absolute; top: 70%; text-align: center; width: 100%; font-size: 23px">论坛通知</p>
+    <div style="position: absolute; background-color: #685BCC"; id="underline2"></div>
+</div>
+
+<div style="position:absolute; width: 80%; "id="information_">
+    <p id="inform_title">论坛通知标题</p>
+    <p style="position:absolute;" id="inform_time">2020-03-30 15:56</p>
+    <p id="announce">一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息一些通知信息.....</p>
+</div>
+
+</body>
 
 <script>
     $.ajax({
@@ -285,12 +386,14 @@
         follow1=res[0];
         follow2=res[1];
         var f1 = document.getElementById("numbers-num");
-        f1.innerText = follow2;
+        f1.innerText = follow1;
+        var f2 = document.getElementById("numbers-num1");
+        f2.innerText = follow2;
     }).fail(function () {
         console.log('失败');
     })
 
-    var k = 1;
+    var k = 3;
     $.ajax(
         {
             url: '',
@@ -298,8 +401,7 @@
             data: k,
         }).then(function (res)
     {
-        alert("发布成功");
-        window.history.go(-1);
+
 
     }).fail(function ()
     {
