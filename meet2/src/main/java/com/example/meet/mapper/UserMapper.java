@@ -20,10 +20,13 @@ public interface UserMapper {
     @Select("SELECT * FROM user")
     public List<User> getAllUser();
 
-    @Insert("INSERT INTO user VALUES(#{userid},#{name},#{password},#{meetingid})")
-    public Integer registerUser(@Param("userid") String userid, @Param("name") String name,
-                                @Param("password") String password, @Param("meetingid") Integer meetingid);
+    @Insert("SELECT * from user where userid = #{userid}")
+    public Integer searchUser(@Param("userid") String userid);
 
     @Select("SElECT * FROM user where userid = #{userid} and password = #{password}")
     public User accessLogin(@Param("userid") String userid,@Param("password") String password);
+
+    @Select("INSERT INTO user name('name','password','meetingid') values(#{username}),#{userpassword},#{usermeetingid}")
+    public Integer registerUser(@Param("username") String username,@Param("userpassword") String password,
+                                @Param("usermeeting") String usermeeting);
 }
