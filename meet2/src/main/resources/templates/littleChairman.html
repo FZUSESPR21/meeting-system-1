@@ -10,6 +10,38 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <style>
         @import url("//unpkg.com/element-ui@2.15.1/lib/theme-chalk/index.css");
+        .workplace1,.workplace2{
+            position: absolute;
+            left: 30%;
+            margin-top: 160px;
+            height: 30%;
+            width: 40%;
+            line-height: 20px;
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 100);
+            color: rgba(16, 16, 16, 100);
+            font-size: 14px;
+            text-align: center;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+            font-family: Roboto;
+            border: 1px solid rgba(187, 187, 187, 100);
+        }
+        .follow1 {
+            position: absolute;
+            left: 13%;
+            top: 78%;
+            font-size: 14px;
+            color: rgba(112, 112, 112, 100);
+            text-align: left;
+        }
+        .follow2 {
+            position: absolute;
+            left: 30%;
+            top: 78%;
+            font-size: 14px;
+            color: rgba(112, 112, 112, 100);
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -57,7 +89,18 @@
         </el-table>
     </template>
 </div>
-
+<div class="workplace1" style="top: 30%">
+    <p style="font-size: 18px; position: absolute; left: 8%; top: 6%;">术语社会科学（SS）</p>
+    <img style="position: absolute; left: 8%; top: 26%;" src="icon-主席.png"/>
+    <p style="position: absolute; left: 12.5%; top: 22%;">分论坛主席</p>
+    <img style="position: absolute; left: 27%; top: 26%;" src="icon-time.png"/>
+    <p style="position: absolute; left: 31%; top: 22%;" >2021-03-29 ~ 2021-04-02</p>
+    <p style="font-size: 16px; position: absolute; left: 8%; top: 32%;width: 85%; text-align: left"><b>摘要：</b>它包括有关管理，经济学，金融，工商管理，电子商务，管理科学，媒体研究，政治学和心理学的研究。该领域的研究主要基于经济学， 管理科学，心理学和社会学的基础学科。</p>
+    <img src="个人@1x.png" style="position: absolute; left: 8%; top: 78%;"/>
+    <label id="follows1" class="follow1">....</label>
+    <img src="浏览记录@1x.png" style="position: absolute; left: 23%; top: 76%; ">
+    <label class="follow2">2637</label>
+</div>
 </body>
 
 <script>
