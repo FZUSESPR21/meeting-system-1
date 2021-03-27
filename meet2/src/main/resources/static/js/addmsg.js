@@ -18,10 +18,10 @@ var Main = {
         var msg=this.form.desc;
         if(identity==1)
         {
-          var k=['分论坛主席'+word,msg];
+          var k=['分主席'+word,msg];
         }
         else if(identity==2){
-            var k=['秘书'+word,msg];
+            var k=['分会秘书'+word,msg];
         }
         $.ajax(
           {
