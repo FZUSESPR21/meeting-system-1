@@ -1,10 +1,10 @@
-package com.example.meetingsystem1;
+package com.example.meet;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MeetingSystem1ApplicationTests {
+class MeetApplicationTests {
 
     @Test
     void contextLoads() {

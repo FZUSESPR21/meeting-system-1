@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://121.4.36.175:3306/meetingdb?serverTimezone=UTC
+    username: root
+    password: 123456!@aA
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml #全局配置文件地址
+  mapper-locations: classpath:mybatis/mapper/*.xml  #sql映射文件位置
+  logging:
+    level:
+      com:
+        example:
+          demo:
+            mapper=debug:
