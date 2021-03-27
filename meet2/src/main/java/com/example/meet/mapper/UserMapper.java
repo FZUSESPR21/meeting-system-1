@@ -1,6 +1,7 @@
 package com.example.meet.mapper;
 
 import com.example.meet.bean.User;
+import com.example.meet.bean.UserShow;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -16,11 +17,12 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    @Select("SELECT * FROM user")
-    public List<User> getAllUser();
+    @Select("SELECT userid,name,meetingid FROM user")
+    public List<UserShow> getAllUser();
 
     @Insert("INSERT INTO user VALUES(#{userid},#{name},#{password},#{meetingid})")
     public Integer registerUser(@Param("userid") String userid, @Param("name") String name,
                                 @Param("password") String password, @Param("meetingid") Integer meetingid);
+
 
 }
