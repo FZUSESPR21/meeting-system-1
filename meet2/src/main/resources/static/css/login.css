@@ -6,6 +6,8 @@
     border-color: #4BFFEC;
     padding:2px;
     position:relative;
+    left:400px;
+    top:100px;
 }
 #login .el-tabs__header{
     padding-top: 10px;
@@ -103,4 +105,26 @@
 }
 #register{
     display:none;
+}
+#selectfourm{
+    width:430px;
+    height:500px;
+    border-style: solid;
+    border-color: #4BFFEC;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display: none;
+}
+.el-checkbox-group{
+    position:absolute;
+    top:220px;
+    left:70px;
+    border-color:blue;
+
+}
+#registersubmit{
+    position:absolute;
+    top:280px;
+    left:150px;
 }

@@ -24,6 +24,24 @@ public class TestController {
     UserServiceImp userServiceImp;
 
 
+
+    @GetMapping("/index")
+    public String index(){
+        return "test";
+    }
+    @GetMapping("/userpage1")
+    public String index2(){
+        return "userPage";
+    }
+    @GetMapping("/userpage2")
+    public String index3(){
+        return "userPage_two";
+    }
+    @GetMapping("/userpage3")
+    public String index4(){
+        return "userPage_three";
+    }
+
     @ResponseBody
     @GetMapping("/get")
     @CrossOrigin(origins = "*", maxAge = 3600)

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>首页</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+
+    <script src="//unpkg.com/vue/dist/vue.js"></script>
+    <script src="//unpkg.com/element-ui@2.15.1/lib/index.js"></script>
     <style>
 
         @import url("//unpkg.com/element-ui@2.15.1/lib/theme-chalk/index.css");
@@ -201,9 +205,6 @@
     </div>
 
     <p style="position:absolute; font-size: 22px; left: 77%; top: 23%;">会议进程</p>
-
-    <script src="//unpkg.com/vue/dist/vue.js"></script>
-    <script src="//unpkg.com/element-ui@2.15.1/lib/index.js"></script>
     <div id="app">
         <el-collapse v-model="activeName" accordion>
             <el-collapse-item title="2021-03-20" name="1">

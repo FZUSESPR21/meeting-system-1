@@ -19,7 +19,7 @@ public interface MsgMapper {
     @Insert("INSERT INTO message ('msgdata','adminname','meetingid','time') values(#{msgdata},#{adminname},#{meetingid},#{time})")
     public Integer addMSg(@Param("msgdata") String msgdata,@Param("adminname") String adminname,@Param("meetingid") Integer meetingid,@Param("time") String time);
 
-    @Select("SELECT adminname,asgdata FROM message where meetingid = #{meetingid}")
+    @Select("SELECT adminname,msgdata FROM message where meetingid = #{meetingid}")
     public List<MegShow> showMsg(@Param("meetingid") Integer meetingid);
 
     @Select("SELECT * FROM message")

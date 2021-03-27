@@ -1,3 +1,6 @@
+var registername;
+var registerpassword;
+var forum1=0;
 function goback(){
   //返回没有登录的界面
   var i=document.getElementById("login");
@@ -63,6 +66,7 @@ var Main = {
         }
       }
       return {
+        checkboxGroup2: [],
         activeName: 'first',
         ruleForm: {
           pass: '',
@@ -93,6 +97,29 @@ var Main = {
       };
     },
     methods: {
+      registersuccess(){
+        var i=this.checkboxGroup2;
+        if(i.length==2){
+          forum1=3;
+        }else if(i=="备选项1"){
+          forum1=1;
+        }else {
+          fourm1=2;
+        }
+  var s=registername+"+"+registerpassword+"+"+forum1;
+  $.ajax(
+    {
+        url: 'register',
+        type: 'post',
+        data: s,
+        }).then(function (res) 
+        {
+          console.log(res);
+        }).fail(function () 
+        {
+            console.log('失败');
+        })
+      },
       submitForm(formName) {
         //普通人的登录
         var password=this.ruleForm.checkPass;
@@ -111,9 +138,9 @@ var Main = {
                     if(i==1){
                       window.location="/userPage.html";
                     }else if(i==2){
-                      window.location="/userPage.html";
+                      window.location="/userPage_two.html";
                     }else {
-                      window.location="/userPage.html";
+                      window.location="/userPage_three.html";
                     }
                   }
                     else {
@@ -147,7 +174,7 @@ var Main = {
                   //主席登录
                   if(res.admin.name=="主席"){
                     //成功 跳转
-
+                    window.location="/Chairman.html";
                   }else {
                     alert("登陆失败")
                   }
@@ -155,10 +182,10 @@ var Main = {
                   //分主席登录
                   if(res.admin.name=="分主席1"){
                     //成功 跳转分主席1
-                    window.location="/forumChairman.html";
+                    window.location="/littleChairman.html";
                   }else if(res.admin.name=="分主席2"){
                     //成功 跳转分主席2
-                    window.location="/forumChairman.html";
+                    window.location="/littleChairman2.html";
                   }else {
                     alert("登陆失败");
                   }
@@ -169,7 +196,7 @@ var Main = {
                     window.location="/secretaryinterface.html";
                   }else if(res.admin.name=="分会秘书2"){
                     //成功 跳转分会秘书2
-                    window.location="/secretaryinterface.html";
+                    window.location="/secretaryinterface2.html";
                   }else {
                     alert("登陆失败");
                   }
@@ -183,7 +210,12 @@ var Main = {
       },
       submitForm2(formName) {
         //注册的表单提交 跳转下一步 选择感兴趣的论坛
-        
+        var i=document.getElementById("selectfourm");
+        i.style.display="block";
+        var j=document.getElementById("register");
+        j.style.display="none";
+        registername=this.registerForm.age;
+        registerpassword=this.registerForm.pass1;
       },
       resetForm(formName) {
         this.$refs[formName].resetFields();
@@ -192,3 +224,6 @@ var Main = {
   };
 var Ctor = Vue.extend(Main)
 new Ctor().$mount('#login')
+
+function registersuccess(){
+};
