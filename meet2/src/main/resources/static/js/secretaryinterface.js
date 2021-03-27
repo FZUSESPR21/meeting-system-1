@@ -2,7 +2,7 @@ var tableData = [];
 window.onload = function(){
     $.ajax(
         {
-            url: '',
+            url: 'http://localhost:8080/get',
             type: 'get',
             data: {},
             dataType: 'json'
