@@ -115,6 +115,7 @@ var Main = {
         }).then(function (res) 
         {
           console.log(res);
+          window.location="/index";
         }).fail(function () 
         {
             console.log('失败');

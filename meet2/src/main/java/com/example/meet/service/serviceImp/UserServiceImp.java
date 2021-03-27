@@ -29,7 +29,7 @@ public class UserServiceImp implements UserService {
     }
 
 
-    public Integer registerUser(String username,String userpassword,String usermeeting){
+    public Integer registerUser(String username,String userpassword,Integer usermeeting){
         return userMapper.registerUser(username,userpassword,usermeeting);
     }
     public User accessLogin(String userid,String password) {
