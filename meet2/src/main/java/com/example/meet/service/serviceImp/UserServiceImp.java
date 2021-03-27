@@ -1,6 +1,7 @@
 package com.example.meet.service.serviceImp;
 
 import com.example.meet.bean.User;
+import com.example.meet.bean.UserShow;
 import com.example.meet.mapper.UserMapper;
 import com.example.meet.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class UserServiceImp implements UserService {
     @Autowired
     UserMapper userMapper;
 
-    public List<User> getAllUser() {
+    public List<UserShow> getAllUser() {
         return userMapper.getAllUser();
     }
 
