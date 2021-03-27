@@ -35,7 +35,7 @@ var Main = {
                 　　　
               }).fail(function () 
               {
-                alert("发布成功");　
+                alert("发布失败");　
                 window.history.go(-1);
               })
       }
