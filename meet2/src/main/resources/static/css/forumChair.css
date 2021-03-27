@@ -32,3 +32,13 @@ body,html{
     background-attachment: fixed;
     background-size: 100% 100%;
 }
+
+.el-table td, .el-table th{
+    text-align: center;
+}
+
+#num_of_meetings{
+    position: relative;
+    top: 200px;
+    margin-right: 200px;
+}
